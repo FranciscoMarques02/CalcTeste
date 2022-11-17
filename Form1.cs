@@ -66,7 +66,7 @@ namespace CalcTeste
 
                 double a = Math.Round(double.Parse(resultado.ToString()), 2);
 
-                txbResultado.Text = a.ToString();
+                txbResultado.Text = (a.ToString()).Replace(",",".");
             }
             catch
             {

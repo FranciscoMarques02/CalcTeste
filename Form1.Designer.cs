@@ -288,8 +288,9 @@
             // 
             // txbResultado
             // 
-            this.txbResultado.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.txbResultado.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txbResultado.Font = new System.Drawing.Font("Lucida Bright", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbResultado.ForeColor = System.Drawing.SystemColors.Window;
             this.txbResultado.Location = new System.Drawing.Point(12, 72);
             this.txbResultado.Name = "txbResultado";
             this.txbResultado.ReadOnly = true;
@@ -312,9 +313,9 @@
             // 
             // txbAux
             // 
-            this.txbAux.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.txbAux.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txbAux.Font = new System.Drawing.Font("Lucida Bright", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txbAux.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.txbAux.ForeColor = System.Drawing.SystemColors.Window;
             this.txbAux.Location = new System.Drawing.Point(193, 46);
             this.txbAux.Name = "txbAux";
             this.txbAux.Size = new System.Drawing.Size(78, 23);
