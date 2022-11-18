@@ -48,6 +48,7 @@
             this.lblTitulo = new System.Windows.Forms.Label();
             this.txbAux = new System.Windows.Forms.TextBox();
             this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnPonto = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn7
@@ -289,12 +290,12 @@
             // txbResultado
             // 
             this.txbResultado.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.txbResultado.Font = new System.Drawing.Font("Lucida Bright", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txbResultado.Font = new System.Drawing.Font("Lucida Bright", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbResultado.ForeColor = System.Drawing.SystemColors.Window;
-            this.txbResultado.Location = new System.Drawing.Point(12, 72);
+            this.txbResultado.Location = new System.Drawing.Point(78, 91);
             this.txbResultado.Name = "txbResultado";
             this.txbResultado.ReadOnly = true;
-            this.txbResultado.Size = new System.Drawing.Size(259, 64);
+            this.txbResultado.Size = new System.Drawing.Size(192, 45);
             this.txbResultado.TabIndex = 15;
             this.txbResultado.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -316,7 +317,7 @@
             this.txbAux.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.txbAux.Font = new System.Drawing.Font("Lucida Bright", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txbAux.ForeColor = System.Drawing.SystemColors.Window;
-            this.txbAux.Location = new System.Drawing.Point(193, 46);
+            this.txbAux.Location = new System.Drawing.Point(192, 62);
             this.txbAux.Name = "txbAux";
             this.txbAux.Size = new System.Drawing.Size(78, 23);
             this.txbAux.TabIndex = 18;
@@ -330,7 +331,7 @@
             this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpar.Font = new System.Drawing.Font("Lucida Bright", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnLimpar.Location = new System.Drawing.Point(145, 329);
+            this.btnLimpar.Location = new System.Drawing.Point(12, 83);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(60, 53);
             this.btnLimpar.TabIndex = 19;
@@ -338,12 +339,29 @@
             this.btnLimpar.UseVisualStyleBackColor = false;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
+            // btnPonto
+            // 
+            this.btnPonto.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnPonto.FlatAppearance.BorderSize = 0;
+            this.btnPonto.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btnPonto.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPonto.Font = new System.Drawing.Font("Lucida Bright", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPonto.ForeColor = System.Drawing.SystemColors.ControlLight;
+            this.btnPonto.Location = new System.Drawing.Point(145, 329);
+            this.btnPonto.Name = "btnPonto";
+            this.btnPonto.Size = new System.Drawing.Size(60, 53);
+            this.btnPonto.TabIndex = 20;
+            this.btnPonto.Text = ".";
+            this.btnPonto.UseVisualStyleBackColor = false;
+            this.btnPonto.Click += new System.EventHandler(this.numeroPressionado);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(283, 401);
+            this.Controls.Add(this.btnPonto);
             this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.txbAux);
             this.Controls.Add(this.lblTitulo);
@@ -394,6 +412,7 @@
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.TextBox txbAux;
         private System.Windows.Forms.Button btnLimpar;
+        private System.Windows.Forms.Button btnPonto;
     }
 }
 

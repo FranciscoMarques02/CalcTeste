@@ -13,7 +13,8 @@ namespace CalcTeste
     public partial class Form1 : Form
     {
         //Variável global:
-        bool flag;              
+        bool flag;
+        string aux, b;
 
         public Form1()
         {
@@ -22,11 +23,24 @@ namespace CalcTeste
 
         //Evento sempre que um nº for clicado
         private void numeroPressionado(object sender, EventArgs e)
-        {                                                                                              
-            //O txbResultado.Text recebe o nº clicado 
+        {                                                                                                           
             Button numero = (Button)sender;
-            txbResultado.Text += numero.Text;            
-           
+            this.aux += "";
+
+            if ((numero.Text == "." && this.aux.Contains(".") == false) || numero.Text != ".")
+            {
+                //Se o "." for clicado antes do primeiro número ou logo após um operador
+                if(numero.Text == "." && this.aux == "")
+                {
+                    txbResultado.Text += "0";
+                }
+
+                //O txbResultado.Text recebe o nº clicado
+                txbResultado.Text += numero.Text;
+                this.aux += numero.Text;
+                this.b = numero.Text;
+            }
+                                  
             flag = true;            
         }
 
@@ -36,12 +50,13 @@ namespace CalcTeste
             Button operador = (Button)sender;
             
             //Não permitir mais de um operador clicado entre nºs
-            if (flag)
+            if (flag && this.b != ".")
             {
                 //O txbResultado.Text recebe operador clicado                 
                 txbResultado.Text += operador.Text;
                 
                 flag = false;
+                this.aux = "";
             } 
             else if (txbResultado.Text != "")
             {
@@ -49,6 +64,7 @@ namespace CalcTeste
                 t[t.Length - 1] = operador.Text.ToArray()[0];
 
                 txbResultado.Text = new string(t);
+                this.aux = "";
             }
            
         }
@@ -80,6 +96,8 @@ namespace CalcTeste
             txbResultado.Text = "";
             txbAux.Text = "";
             flag = false;
+            this.aux = "";
+            this.b = "";
         }
     }
 }
